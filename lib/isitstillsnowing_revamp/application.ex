@@ -8,12 +8,14 @@ defmodule IsitstillsnowingRevamp.Application do
   @impl true
   def start(_type, _args) do
     children = [
-      # Starts a worker by calling: IsitstillsnowingRevamp.Worker.start_link(arg)
-      # {IsitstillsnowingRevamp.Worker, arg}
+      {
+        Plug.Cowboy,
+        scheme: :http,
+        plug: IsitstillsnowingRevamp.Http.Router,
+        port: 4040
+      }
     ]
 
-    # See https://hexdocs.pm/elixir/Supervisor.html
-    # for other strategies and supported options
     opts = [strategy: :one_for_one, name: IsitstillsnowingRevamp.Supervisor]
     Supervisor.start_link(children, opts)
   end
