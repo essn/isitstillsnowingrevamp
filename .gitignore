@@ -27,3 +27,6 @@ isitstillsnowing_revamp-*.tar
 
 # Wakatime Project
 .wakatime-project
+
+# direnv
+.envrc
