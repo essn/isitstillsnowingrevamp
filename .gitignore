@@ -24,3 +24,6 @@ isitstillsnowing_revamp-*.tar
 
 # Temporary files, for example, from tests.
 /tmp/
+
+# Wakatime Project
+.wakatime-project
