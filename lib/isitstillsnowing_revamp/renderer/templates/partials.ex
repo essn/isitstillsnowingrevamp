@@ -11,9 +11,9 @@ defmodule IsitstillsnowingRevamp.Renderer.Templates.Partials do
     result
   end
 
-  def body() do
+  def body(snowing_text) do
     quoted = EEx.compile_file(@body)
-    {result, _bindings} = Code.eval_quoted(quoted)
+    {result, _bindings} = Code.eval_quoted(quoted, snowing_text: snowing_text)
     result
   end
 

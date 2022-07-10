@@ -5,13 +5,13 @@ defmodule IsitstillsnowingRevamp.Renderer.Layout do
 
   @path "lib/isitstillsnowing_revamp/renderer/templates/app.html.eex"
 
-  def layout do
+  def layout(snowing_text) do
     quoted = EEx.compile_file(@path)
 
     {result, _bindings} =
       Code.eval_quoted(quoted,
         header: Partials.header(),
-        body: Partials.body(),
+        body: Partials.body(snowing_text),
         footer: Partials.footer()
       )
 
