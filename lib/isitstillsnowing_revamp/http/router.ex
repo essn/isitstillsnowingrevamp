@@ -12,9 +12,7 @@ defmodule IsitstillsnowingRevamp.Http.Router do
   get "/" do
     %{remote_ip: ip} = conn
 
-    format_ip(ip) |> IO.inspect()
 
-    build_ip_info("62.182.98.212") |> IO.inspect()
 
     conn
     |> put_resp_header("content-type", "text/html; charset=utf-8")
