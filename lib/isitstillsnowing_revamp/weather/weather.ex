@@ -4,7 +4,7 @@ defmodule IsitstillsnowingRevamp.Weather do
     lon: nil,
     zip: nil,
     weather_list: nil,
-    snowing: nil
+    weather_type: nil
 
   @spec build_ip_info(String.t()) :: {atom, %__MODULE__{}}
   def build_ip_info(ip) do
@@ -60,6 +60,6 @@ defmodule IsitstillsnowingRevamp.Weather do
   defp calculate_is_snowing({:ok, ip_info = %__MODULE__{}}) do
     types = Enum.map ip_info.weather_list, fn(item) -> item["main"] end
 
-    {:ok, %__MODULE__{ip_info | snowing: Enum.member?(types, "Snow")}}
+    {:ok, %__MODULE__{ip_info | weather_type: types}}
   end
 end
