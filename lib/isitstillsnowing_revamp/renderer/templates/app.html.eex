@@ -3,7 +3,7 @@
 <head>
   <%= header %>
 </head>
-<body style="top: 0px; right: 0px; background: black; width: 100%;">
+<body>
   <%= body %>
 </body>
 
