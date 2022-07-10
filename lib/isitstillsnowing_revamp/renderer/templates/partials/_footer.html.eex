@@ -1,5 +1,5 @@
-<div>
-  <p style="color: white">
+<div class="centered-element bottom">
+  <p>
     Made by <a href="https://github.com/essn">essn</a>
   </p>
 </div>
