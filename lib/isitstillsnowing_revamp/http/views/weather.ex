@@ -8,9 +8,9 @@ defmodule IsitstillsnowingRevamp.Http.Views.Weather do
   alias IsitstillsnowingRevamp.Weather
 
   @weather_text %{
-    snow: "YES",
-    not_snowing: "NO",
-    raining: "MAYBE"
+    snow: "YUP!",
+    not_snowing: "NOPE!",
+    raining: "MAYBE!"
   }
 
   @snow ["Snow"]
