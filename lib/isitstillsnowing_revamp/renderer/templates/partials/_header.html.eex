@@ -3,4 +3,42 @@
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <meta name="description" content="Is it still snowing?" />
 <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    background: black;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+  }
+
+  .centered-element.middle {
+    margin: 0;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .centered-element.bottom {
+    margin: 0;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: grey;
+  }
+
+  .status-text {
+    color: white;
+    font-size: xxx-large;
+  }
+</style>
 
