@@ -30,3 +30,6 @@ isitstillsnowing_revamp-*.tar
 
 # direnv
 .envrc
+
+# env
+.env
