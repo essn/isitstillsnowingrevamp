@@ -14,6 +14,7 @@ defmodule IsitstillsnowingRevamp.Http.Router do
 
     {_status, ip_weather_info} = format_ip(ip) |> build_ip_info()
 
+    # TODO: Why is this being weird? File permissions? Imports?
     text = IsitstillsnowingRevamp.Http.Views.Weather.text(ip_weather_info)
 
     conn
