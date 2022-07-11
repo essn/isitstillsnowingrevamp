@@ -25,6 +25,10 @@ defmodule IsitstillsnowingRevamp.Http.Views.Weather do
     text
   end
 
+  # Maybe if we can't analyze it
+  def text(_), do: @weather_text.raining
+  def text(), do: @weather_text.raining
+
   defp is_snowing?({weather_type, text} = args) do
     case has_weather?(@snow, weather_type) && is_nil(text) do
       true -> {weather_type, @weather_text.snow}
