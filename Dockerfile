@@ -1,6 +1,9 @@
-FROM elixir:otp-25 as build
+FROM elixir:otp-25
 
 ARG OPENAPIWEATHER_API_KEY
+
+# Define the open weather api key
+ENV an_env_var=$OPENAPIWEATHER_API_KEY
 
 # Copy the source folder into the Docker image
 COPY . .
